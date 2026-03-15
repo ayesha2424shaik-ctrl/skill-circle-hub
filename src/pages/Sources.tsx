@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import ResourceCard from "@/components/ResourceCard";
-import { techResources, nonTechResources } from "@/data/mockData";
-import { Code, Users } from "lucide-react";
+import { skills } from "@/data/mockData";
+import { Code, Users, BookOpen } from "lucide-react";
 
 const Sources = () => (
   <div className="min-h-screen bg-background">
