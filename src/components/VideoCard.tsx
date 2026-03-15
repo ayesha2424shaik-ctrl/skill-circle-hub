@@ -3,8 +3,15 @@ import type { Video } from "@/data/mockData";
 
 const VideoCard = ({ video }: { video: Video }) => (
   <div className="bg-card border border-border rounded-lg overflow-hidden hover:border-primary/30 transition-colors">
-    <div className="aspect-video bg-muted flex items-center justify-center">
-      <Play size={24} className="text-muted-foreground" />
+    <div className="aspect-video relative overflow-hidden">
+      <img
+        src={video.thumbnail}
+        alt={video.title}
+        className="w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+        <Play size={32} className="text-white" />
+      </div>
     </div>
     <div className="p-3 space-y-1">
       <span className={`text-[10px] font-medium px-1.5 py-0.5 rounded ${video.category === "tech" ? "bg-primary/15 text-primary" : "bg-secondary/15 text-secondary"}`}>
