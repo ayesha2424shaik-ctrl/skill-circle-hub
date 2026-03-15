@@ -29,7 +29,10 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 h-14 flex items-center justify-between">
-        <Link to="/home" className="text-lg font-bold text-primary">Skill Circle</Link>
+        <Link to="/home" className="flex items-center gap-2 text-lg font-bold text-primary">
+          <PenNib size={20} className="text-primary" />
+          Skill Circle
+        </Link>
 
         <div className="hidden md:flex items-center gap-1">
           {links.map(l => (
