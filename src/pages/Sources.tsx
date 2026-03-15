@@ -3,6 +3,10 @@ import ResourceCard from "@/components/ResourceCard";
 import { skills } from "@/data/mockData";
 import { Code, Users, BookOpen } from "lucide-react";
 
+const allResources = skills.flatMap(s => s.resources.map(r => ({ ...r, skillTitle: s.title, category: s.category })));
+const techResources = allResources.filter(r => r.category === "tech");
+const nonTechResources = allResources.filter(r => r.category === "nontech");
+
 const Sources = () => (
   <div className="min-h-screen bg-background">
     <Navbar />

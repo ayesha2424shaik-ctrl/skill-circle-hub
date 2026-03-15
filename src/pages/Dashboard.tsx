@@ -28,9 +28,9 @@ const Dashboard = () => {
         <p className="text-sm text-muted-foreground mb-6">Here's your learning overview</p>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-8">
-          <StatCard icon={Code} label="Tech Skills" value={techVideos.length} color="text-primary" />
-          <StatCard icon={Users} label="Non-Tech Skills" value={nonTechVideos.length} color="text-secondary" />
-          <StatCard icon={BookOpen} label="Resources" value={techResources.length + nonTechResources.length} color="text-primary" />
+          <StatCard icon={Code} label="Tech Skills" value={techSkills.length} color="text-primary" />
+          <StatCard icon={Users} label="Non-Tech Skills" value={nonTechSkills.length} color="text-secondary" />
+          <StatCard icon={BookOpen} label="Total Resources" value={skills.reduce((a, s) => a + s.resources.length, 0)} color="text-primary" />
           <StatCard icon={Bell} label="Notifications" value={notifications.length} color="text-secondary" />
         </div>
 
