@@ -11,6 +11,7 @@ import Register from "./pages/Register";
 import HomePage from "./pages/HomePage";
 import Dashboard from "./pages/Dashboard";
 import Sources from "./pages/Sources";
+import SkillDetail from "./pages/SkillDetail";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
