@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import { useAuth } from "@/context/AuthContext";
 import { useNotifications } from "@/context/NotificationContext";
-import { techVideos, nonTechVideos, techResources, nonTechResources } from "@/data/mockData";
+import { techSkills, nonTechSkills, skills } from "@/data/mockData";
 import { BookOpen, Code, Users, Bell } from "lucide-react";
 
 const StatCard = ({ icon: Icon, label, value, color }: { icon: any; label: string; value: number; color: string }) => (
