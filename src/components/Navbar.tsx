@@ -1,6 +1,6 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "@/context/AuthContext";
-import { LogOut, Home, BookOpen, LayoutDashboard, Menu, X, Bell, PenNib } from "lucide-react";
+import { LogOut, Home, BookOpen, LayoutDashboard, Menu, X, Bell, Pen } from "lucide-react";
 import { useState } from "react";
 import { useNotifications } from "@/context/NotificationContext";
 
