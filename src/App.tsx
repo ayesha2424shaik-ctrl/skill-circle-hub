@@ -11,6 +11,7 @@ import Register from "./pages/Register";
 import HomePage from "./pages/HomePage";
 import Dashboard from "./pages/Dashboard";
 import Sources from "./pages/Sources";
+import SkillDetail from "./pages/SkillDetail";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -35,6 +36,7 @@ const AppRoutes = () => (
     <Route path="/login" element={<PublicRoute><Login /></PublicRoute>} />
     <Route path="/register" element={<PublicRoute><Register /></PublicRoute>} />
     <Route path="/home" element={<ProtectedRoute><HomePage /></ProtectedRoute>} />
+    <Route path="/skill/:skillId" element={<ProtectedRoute><SkillDetail /></ProtectedRoute>} />
     <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
     <Route path="/sources" element={<ProtectedRoute><Sources /></ProtectedRoute>} />
     <Route path="*" element={<NotFound />} />
