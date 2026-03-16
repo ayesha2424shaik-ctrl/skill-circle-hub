@@ -210,6 +210,164 @@ export const skills: Skill[] = [
     ],
     platforms: [],
   },
+  {
+    id: "html-css",
+    title: "HTML & CSS",
+    description: "Master the building blocks of web design and styling.",
+    thumbnail: htmlCssThumb,
+    category: "tech",
+    videos: [
+      { id: "v21", title: "HTML & CSS Full Course", description: "Complete guide to building websites.", videoLink: "https://www.youtube.com/watch?v=mU6anWqZJcc" },
+      { id: "v22", title: "CSS Flexbox & Grid", description: "Modern layout techniques for responsive design.", videoLink: "https://www.youtube.com/watch?v=3YW65K6LcIA" },
+    ],
+    resources: [
+      { id: "r18", title: "MDN Web Docs", description: "Complete HTML and CSS reference.", link: "https://developer.mozilla.org/en-US/docs/Web" },
+      { id: "r19", title: "CSS Tricks", description: "Tips, tricks, and techniques on CSS.", link: "https://css-tricks.com" },
+    ],
+    platforms: [
+      { id: "p11", name: "CodePen", description: "Online code editor for frontend experiments.", link: "https://codepen.io" },
+      { id: "p12", name: "Frontend Mentor", description: "Real-world frontend challenges.", link: "https://frontendmentor.io" },
+    ],
+  },
+  {
+    id: "typescript",
+    title: "TypeScript",
+    description: "Add static typing to JavaScript for safer, more scalable code.",
+    thumbnail: typescriptThumb,
+    category: "tech",
+    videos: [
+      { id: "v23", title: "TypeScript for Beginners", description: "Learn TypeScript fundamentals from scratch.", videoLink: "https://www.youtube.com/watch?v=d56mG7DezGs" },
+      { id: "v24", title: "TypeScript with React", description: "Build type-safe React applications.", videoLink: "https://www.youtube.com/watch?v=TPACABQTHvM" },
+    ],
+    resources: [
+      { id: "r20", title: "TypeScript Official Docs", description: "Official TypeScript documentation.", link: "https://typescriptlang.org/docs" },
+      { id: "r21", title: "TypeScript Deep Dive", description: "Free comprehensive TypeScript book.", link: "https://basarat.gitbook.io/typescript" },
+    ],
+    platforms: [
+      { id: "p13", name: "TypeScript Playground", description: "Online TypeScript editor and compiler.", link: "https://typescriptlang.org/play" },
+      { id: "p14", name: "Exercism TypeScript", description: "Practice TypeScript with exercises.", link: "https://exercism.org/tracks/typescript" },
+    ],
+  },
+  {
+    id: "sql",
+    title: "SQL & Databases",
+    description: "Learn to work with relational databases and query data.",
+    thumbnail: sqlThumb,
+    category: "tech",
+    videos: [
+      { id: "v25", title: "SQL Full Course", description: "Complete SQL tutorial for beginners.", videoLink: "https://www.youtube.com/watch?v=HXV3zeQKqGY" },
+      { id: "v26", title: "Database Design", description: "Learn to design efficient database schemas.", videoLink: "https://www.youtube.com/watch?v=ztHopE5Wnpc" },
+    ],
+    resources: [
+      { id: "r22", title: "SQL Tutorial", description: "Interactive SQL tutorials.", link: "https://sqlzoo.net" },
+      { id: "r23", title: "PostgreSQL Docs", description: "PostgreSQL documentation.", link: "https://postgresql.org/docs" },
+    ],
+    platforms: [
+      { id: "p15", name: "SQLBolt", description: "Interactive SQL lessons.", link: "https://sqlbolt.com" },
+      { id: "p16", name: "LeetCode Database", description: "SQL practice problems.", link: "https://leetcode.com/problemset/database" },
+    ],
+  },
+  {
+    id: "docker",
+    title: "Docker & Containerization",
+    description: "Learn to containerize applications for consistent deployment.",
+    thumbnail: dockerThumb,
+    category: "tech",
+    videos: [
+      { id: "v27", title: "Docker Tutorial for Beginners", description: "Complete Docker crash course.", videoLink: "https://www.youtube.com/watch?v=3c-iBn73dDE" },
+      { id: "v28", title: "Docker Compose", description: "Manage multi-container applications.", videoLink: "https://www.youtube.com/watch?v=SXwC9fSwct8" },
+    ],
+    resources: [
+      { id: "r24", title: "Docker Official Docs", description: "Docker documentation and guides.", link: "https://docs.docker.com" },
+      { id: "r25", title: "Docker Hub", description: "Container image registry.", link: "https://hub.docker.com" },
+    ],
+    platforms: [
+      { id: "p17", name: "Play with Docker", description: "Free Docker playground.", link: "https://labs.play-with-docker.com" },
+      { id: "p18", name: "Katacoda Docker", description: "Interactive Docker scenarios.", link: "https://katacoda.com/courses/docker" },
+    ],
+  },
+  {
+    id: "dsa",
+    title: "Data Structures & Algorithms",
+    description: "Master fundamental CS concepts for coding interviews.",
+    thumbnail: dsaThumb,
+    category: "tech",
+    videos: [
+      { id: "v29", title: "Data Structures Full Course", description: "Complete guide to data structures.", videoLink: "https://www.youtube.com/watch?v=RBSGKlAvoiM" },
+      { id: "v30", title: "Algorithm Techniques", description: "Common algorithm patterns and approaches.", videoLink: "https://www.youtube.com/watch?v=8hly31xKli0" },
+    ],
+    resources: [
+      { id: "r26", title: "GeeksforGeeks", description: "DSA tutorials and practice.", link: "https://geeksforgeeks.org" },
+      { id: "r27", title: "Algorithm Visualizer", description: "Visualize how algorithms work.", link: "https://algorithm-visualizer.org" },
+    ],
+    platforms: [
+      { id: "p19", name: "LeetCode", description: "Coding interview preparation.", link: "https://leetcode.com" },
+      { id: "p20", name: "HackerRank DSA", description: "Data structures and algorithms practice.", link: "https://hackerrank.com/domains/data-structures" },
+    ],
+  },
+  {
+    id: "teamwork",
+    title: "Teamwork & Collaboration",
+    description: "Learn to work effectively in teams and collaborate.",
+    thumbnail: teamworkThumb,
+    category: "nontech",
+    videos: [
+      { id: "v31", title: "Teamwork Skills", description: "Essential skills for effective collaboration.", videoLink: "https://www.youtube.com/watch?v=yyw0xeOwVd0" },
+      { id: "v32", title: "Remote Team Collaboration", description: "Collaborate effectively in remote settings.", videoLink: "https://www.youtube.com/watch?v=a9TRj8RFy3I" },
+    ],
+    resources: [
+      { id: "r28", title: "Harvard Teamwork Guide", description: "Building and leading effective teams.", link: "https://hbr.org/topic/teams" },
+      { id: "r29", title: "Atlassian Team Playbook", description: "Team collaboration best practices.", link: "https://atlassian.com/team-playbook" },
+    ],
+    platforms: [],
+  },
+  {
+    id: "problem-solving",
+    title: "Problem Solving",
+    description: "Develop analytical thinking and creative solutions.",
+    thumbnail: problemSolvingThumb,
+    category: "nontech",
+    videos: [
+      { id: "v33", title: "Problem Solving Techniques", description: "Structured approaches to solving problems.", videoLink: "https://www.youtube.com/watch?v=UFdR8w_R1HA" },
+      { id: "v34", title: "Creative Problem Solving", description: "Think outside the box for innovative solutions.", videoLink: "https://www.youtube.com/watch?v=9k_jABNk6tc" },
+    ],
+    resources: [
+      { id: "r30", title: "Mind Tools Problem Solving", description: "Problem solving techniques and tools.", link: "https://mindtools.com/problem-solving" },
+    ],
+    platforms: [],
+  },
+  {
+    id: "critical-thinking",
+    title: "Critical Thinking",
+    description: "Enhance analytical and logical reasoning abilities.",
+    thumbnail: criticalThinkingThumb,
+    category: "nontech",
+    videos: [
+      { id: "v35", title: "Critical Thinking Skills", description: "Develop better reasoning and analysis.", videoLink: "https://www.youtube.com/watch?v=Cum3k-Wglfw" },
+      { id: "v36", title: "Logical Reasoning", description: "Improve your logical thinking abilities.", videoLink: "https://www.youtube.com/watch?v=bCqLnNJws5o" },
+    ],
+    resources: [
+      { id: "r31", title: "Critical Thinking Web", description: "Free online critical thinking tutorials.", link: "https://philosophy.hku.hk/think" },
+      { id: "r32", title: "Coursera Critical Thinking", description: "University-level critical thinking courses.", link: "https://coursera.org/courses?query=critical%20thinking" },
+    ],
+    platforms: [],
+  },
+  {
+    id: "emotional-intelligence",
+    title: "Emotional Intelligence",
+    description: "Build self-awareness and empathy for better relationships.",
+    thumbnail: emotionalIntelligenceThumb,
+    category: "nontech",
+    videos: [
+      { id: "v37", title: "Emotional Intelligence Explained", description: "Understanding and developing EQ.", videoLink: "https://www.youtube.com/watch?v=Y7m9eNoB3NU" },
+      { id: "v38", title: "Building Empathy", description: "Develop empathy and emotional awareness.", videoLink: "https://www.youtube.com/watch?v=1Evwgu369Jw" },
+    ],
+    resources: [
+      { id: "r33", title: "Psychology Today EQ", description: "Articles on emotional intelligence.", link: "https://psychologytoday.com/basics/emotional-intelligence" },
+      { id: "r34", title: "Greater Good Magazine", description: "Science-based insights on well-being and EQ.", link: "https://greatergood.berkeley.edu" },
+    ],
+    platforms: [],
+  },
 ];
 
 export const techSkills = skills.filter(s => s.category === "tech");
