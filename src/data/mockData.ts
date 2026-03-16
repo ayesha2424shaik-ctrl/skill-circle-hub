@@ -3,10 +3,19 @@ import jsThumb from "@/assets/js-thumb.jpg";
 import nodejsThumb from "@/assets/nodejs-thumb.jpg";
 import pythonThumb from "@/assets/python-thumb.jpg";
 import gitThumb from "@/assets/git-thumb.jpg";
+import htmlCssThumb from "@/assets/html-css-thumb.jpg";
+import typescriptThumb from "@/assets/typescript-thumb.jpg";
+import sqlThumb from "@/assets/sql-thumb.jpg";
+import dockerThumb from "@/assets/docker-thumb.jpg";
+import dsaThumb from "@/assets/dsa-thumb.jpg";
 import communicationThumb from "@/assets/communication-thumb.jpg";
 import speakingThumb from "@/assets/speaking-thumb.jpg";
 import timemgmtThumb from "@/assets/timemgmt-thumb.jpg";
 import leadershipThumb from "@/assets/leadership-thumb.jpg";
+import teamworkThumb from "@/assets/teamwork-thumb.jpg";
+import problemSolvingThumb from "@/assets/problem-solving-thumb.jpg";
+import criticalThinkingThumb from "@/assets/critical-thinking-thumb.jpg";
+import emotionalIntelligenceThumb from "@/assets/emotional-intelligence-thumb.jpg";
 
 export interface Video {
   id: string;
