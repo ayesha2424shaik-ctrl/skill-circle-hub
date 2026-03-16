@@ -22,16 +22,18 @@ const Navbar = () => {
   ];
 
   const linkClass = (path: string) =>
-    `flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-      location.pathname === path ? "bg-primary/15 text-primary" : "text-muted-foreground hover:text-foreground hover:bg-muted"
+    `flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-medium transition-all ${
+      location.pathname === path ? "gradient-bg text-primary-foreground elegant-shadow" : "text-muted-foreground hover:text-foreground hover:bg-muted"
     }`;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-card/80 backdrop-blur-xl border-b border-border/50">
       <div className="container mx-auto px-4 h-14 flex items-center justify-between">
-        <Link to="/home" className="flex items-center gap-2 text-lg font-bold text-primary">
-          <Pen size={20} className="text-primary" />
-          Skill Circle
+        <Link to="/home" className="flex items-center gap-2 text-lg font-bold">
+          <div className="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center">
+            <Pen size={16} className="text-primary-foreground" />
+          </div>
+          <span className="gradient-text">Skill Circle</span>
         </Link>
 
         <div className="hidden md:flex items-center gap-1">
@@ -45,17 +47,17 @@ const Navbar = () => {
           <div className="relative ml-2">
             <button
               onClick={() => { setShowNotifs(!showNotifs); if (!showNotifs) markAllRead(); }}
-              className="relative p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+              className="relative p-2 rounded-xl text-muted-foreground hover:text-foreground hover:bg-muted transition-all"
             >
               <Bell size={16} />
               {unreadCount > 0 && (
-                <span className="absolute -top-0.5 -right-0.5 w-4 h-4 rounded-full bg-destructive text-destructive-foreground text-[10px] flex items-center justify-center font-bold">
+                <span className="absolute -top-0.5 -right-0.5 w-4 h-4 rounded-full bg-destructive text-destructive-foreground text-[10px] flex items-center justify-center font-bold animate-pulse">
                   {unreadCount}
                 </span>
               )}
             </button>
             {showNotifs && (
-              <div className="absolute right-0 top-10 w-72 bg-card border border-border rounded-lg shadow-lg overflow-hidden z-50">
+              <div className="absolute right-0 top-10 w-72 glass-card rounded-xl overflow-hidden z-50">
                 <div className="px-3 py-2 border-b border-border text-xs font-medium text-muted-foreground">Notifications</div>
                 {notifications.length === 0 ? (
                   <p className="p-3 text-xs text-muted-foreground">No notifications yet</p>
@@ -73,7 +75,7 @@ const Navbar = () => {
             )}
           </div>
 
-          <button onClick={handleLogout} className="flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:text-destructive hover:bg-muted transition-colors ml-1">
+          <button onClick={handleLogout} className="flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-medium text-muted-foreground hover:text-destructive hover:bg-muted transition-all ml-1">
             <LogOut size={16} /> Logout
           </button>
         </div>
@@ -84,13 +86,13 @@ const Navbar = () => {
       </div>
 
       {mobileOpen && (
-        <div className="md:hidden bg-card border-t border-border px-4 py-2 space-y-1">
+        <div className="md:hidden bg-card/95 backdrop-blur-xl border-t border-border px-4 py-2 space-y-1">
           {links.map(l => (
             <Link key={l.to} to={l.to} onClick={() => setMobileOpen(false)} className={linkClass(l.to) + " w-full"}>
               <l.icon size={16} /> {l.label}
             </Link>
           ))}
-          <button onClick={handleLogout} className="flex items-center gap-2 px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-destructive w-full">
+          <button onClick={handleLogout} className="flex items-center gap-2 px-3 py-2 rounded-xl text-sm text-muted-foreground hover:text-destructive w-full">
             <LogOut size={16} /> Logout
           </button>
         </div>

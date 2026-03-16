@@ -1,103 +1,130 @@
 import Navbar from "@/components/Navbar";
-import { techSkills, nonTechSkills, Skill } from "@/data/mockData";
-import { Code, Users, Search, X } from "lucide-react";
+import Footer from "@/components/Footer";
+import { techSkills, nonTechSkills, skills, Skill } from "@/data/mockData";
+import { Code, Users, Search, X, Sparkles, ArrowRight } from "lucide-react";
 import { useState, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "@/context/AuthContext";
+import { motion } from "framer-motion";
 
-const SkillCard = ({ skill }: { skill: Skill }) => {
+const SkillCard = ({ skill, index }: { skill: Skill; index: number }) => {
   const navigate = useNavigate();
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: index * 0.05, duration: 0.4 }}
       onClick={() => navigate(`/skill/${skill.id}`)}
-      className="bg-card border border-border rounded-xl overflow-hidden hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5 transition-all cursor-pointer group"
+      className="bg-card border border-border rounded-xl overflow-hidden hover:border-primary/40 transition-all cursor-pointer group hover-lift"
     >
       <div className="aspect-video relative overflow-hidden">
-        <img src={skill.thumbnail} alt={skill.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-        <span className={`absolute top-2 right-2 text-[10px] font-medium px-2 py-0.5 rounded-full ${skill.category === "tech" ? "bg-primary text-primary-foreground" : "bg-secondary text-secondary-foreground"}`}>
+        <img src={skill.thumbnail} alt={skill.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+        <span className={`absolute top-3 right-3 text-[10px] font-semibold px-2.5 py-1 rounded-full backdrop-blur-sm ${skill.category === "tech" ? "bg-primary/80 text-primary-foreground" : "bg-secondary/80 text-secondary-foreground"}`}>
           {skill.category === "tech" ? "Tech" : "Non-Tech"}
         </span>
-      </div>
-      <div className="p-4">
-        <h3 className="text-base font-bold text-foreground">{skill.title}</h3>
-        <p className="text-xs text-muted-foreground mt-1 line-clamp-2">{skill.description}</p>
-        <div className="flex gap-3 mt-3 text-[10px] text-muted-foreground">
-          {skill.videos.length > 0 && <span>{skill.videos.length} Videos</span>}
-          {skill.resources.length > 0 && <span>{skill.resources.length} Resources</span>}
-          {skill.platforms.length > 0 && <span>{skill.platforms.length} Platforms</span>}
+        <div className="absolute bottom-3 left-3 right-3">
+          <h3 className="text-sm font-bold text-white drop-shadow-md">{skill.title}</h3>
         </div>
       </div>
-    </div>
+      <div className="p-4">
+        <p className="text-xs text-muted-foreground line-clamp-2">{skill.description}</p>
+        <div className="flex items-center justify-between mt-3">
+          <div className="flex gap-3 text-[10px] text-muted-foreground">
+            {skill.videos.length > 0 && <span className="flex items-center gap-1">📹 {skill.videos.length}</span>}
+            {skill.resources.length > 0 && <span className="flex items-center gap-1">📄 {skill.resources.length}</span>}
+            {skill.platforms.length > 0 && <span className="flex items-center gap-1">💻 {skill.platforms.length}</span>}
+          </div>
+          <ArrowRight size={14} className="text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+        </div>
+      </div>
+    </motion.div>
   );
 };
 
-const Section = ({ icon: Icon, title, subtitle, children }: { icon: any; title: string; subtitle: string; children: React.ReactNode }) => (
-  <section className="mb-12">
-    <div className="flex items-center gap-2 mb-4">
-      <Icon size={18} className="text-primary" />
-      <div>
-        <h2 className="text-lg font-bold text-foreground">{title}</h2>
-        <p className="text-xs text-muted-foreground">{subtitle}</p>
-      </div>
-    </div>
-    {children}
-  </section>
-);
+type Filter = "all" | "tech" | "nontech";
 
 const HomePage = () => {
+  const { user } = useAuth();
   const [searchQuery, setSearchQuery] = useState("");
+  const [filter, setFilter] = useState<Filter>("all");
 
-  const filterSkills = (skills: Skill[]) =>
-    skills.filter(s =>
+  const filterSkills = (allSkills: Skill[]) =>
+    allSkills.filter(s =>
       s.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       s.description.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
-  const filteredTech = useMemo(() => filterSkills(techSkills), [searchQuery]);
-  const filteredNonTech = useMemo(() => filterSkills(nonTechSkills), [searchQuery]);
-  const hasResults = filteredTech.length > 0 || filteredNonTech.length > 0;
+  const displayedSkills = useMemo(() => {
+    const base = filter === "tech" ? techSkills : filter === "nontech" ? nonTechSkills : skills;
+    return filterSkills(base);
+  }, [searchQuery, filter]);
+
+  const filters: { key: Filter; label: string; icon: any }[] = [
+    { key: "all", label: "All Skills", icon: Sparkles },
+    { key: "tech", label: "Tech", icon: Code },
+    { key: "nontech", label: "Non-Tech", icon: Users },
+  ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
       <Navbar />
-      <main className="container mx-auto px-4 pt-20 pb-12">
-        <div className="mb-8">
-          <div className="relative max-w-md">
+      <main className="container mx-auto px-4 pt-20 pb-12 flex-1">
+        {/* Hero greeting */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="mb-8"
+        >
+          <h1 className="text-2xl md:text-3xl font-bold text-foreground">
+            Welcome back, <span className="gradient-text">{user?.name || "Learner"}</span> 👋
+          </h1>
+          <p className="text-muted-foreground mt-1">Continue your learning journey. Pick a skill to explore.</p>
+        </motion.div>
+
+        {/* Search + Filters */}
+        <div className="flex flex-col sm:flex-row gap-3 mb-8">
+          <div className="relative flex-1 max-w-md">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <input type="text" placeholder="Search skills..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full h-10 pl-10 pr-10 rounded-lg border border-input bg-background text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring" />
+              className="w-full h-10 pl-10 pr-10 rounded-xl border border-input bg-card text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring transition-shadow" />
             {searchQuery && (
               <button onClick={() => setSearchQuery("")} className="absolute right-3 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground">
                 <X className="h-4 w-4" />
               </button>
             )}
           </div>
+          <div className="flex gap-2">
+            {filters.map(f => (
+              <button
+                key={f.key}
+                onClick={() => setFilter(f.key)}
+                className={`flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-medium transition-all ${
+                  filter === f.key
+                    ? "gradient-bg text-primary-foreground elegant-shadow"
+                    : "bg-card border border-border text-muted-foreground hover:text-foreground hover:border-primary/30"
+                }`}
+              >
+                <f.icon size={14} />
+                {f.label}
+              </button>
+            ))}
+          </div>
         </div>
 
-        {!hasResults && searchQuery ? (
-          <div className="text-center py-12">
+        {/* Skills grid */}
+        {displayedSkills.length === 0 ? (
+          <div className="text-center py-16">
             <p className="text-sm text-muted-foreground">No skills found matching &quot;{searchQuery}&quot;</p>
-            <button onClick={() => setSearchQuery("")} className="text-sm text-primary mt-2 hover:underline">Clear search</button>
+            <button onClick={() => { setSearchQuery(""); setFilter("all"); }} className="text-sm text-primary mt-2 hover:underline">Clear filters</button>
           </div>
         ) : (
-          <>
-            {filteredTech.length > 0 && (
-              <Section icon={Code} title="Tech Skills" subtitle="Master the latest technologies">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                  {filteredTech.map(s => <SkillCard key={s.id} skill={s} />)}
-                </div>
-              </Section>
-            )}
-            {filteredNonTech.length > 0 && (
-              <Section icon={Users} title="Non-Tech Skills" subtitle="Build essential soft skills">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                  {filteredNonTech.map(s => <SkillCard key={s.id} skill={s} />)}
-                </div>
-              </Section>
-            )}
-          </>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+            {displayedSkills.map((s, i) => <SkillCard key={s.id} skill={s} index={i} />)}
+          </div>
         )}
       </main>
+      <Footer />
     </div>
   );
 };
