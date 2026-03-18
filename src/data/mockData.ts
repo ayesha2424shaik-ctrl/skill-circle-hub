@@ -232,6 +232,10 @@ export const skills: Skill[] = [
       { id: "r15", title: "Todoist Productivity Guide", description: "Practical productivity methods and tips.", link: "https://todoist.com/productivity-methods" },
     ],
     platforms: [],
+    documentation: [
+      { id: "d17", title: "Getting Things Done", description: "David Allen's productivity methodology explained.", link: "https://gettingthingsdone.com", type: "book" },
+      { id: "d18", title: "Pomodoro Technique Guide", description: "Official guide to the Pomodoro time management method.", link: "https://francescocirillo.com/products/the-pomodoro-technique", type: "guide" },
+    ],
   },
   {
     id: "leadership",
