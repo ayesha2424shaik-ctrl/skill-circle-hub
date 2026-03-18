@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Pen, Code, Users, BookOpen, Sparkles, TrendingUp, Award } from "lucide-react";
+import { ArrowRight, Code, Users, BookOpen, Sparkles, TrendingUp, Award } from "lucide-react";
+import logo from "@/assets/logo.svg";
 
 const floatingIcons = [
   { icon: Code, x: "10%", y: "20%", delay: 0 },
