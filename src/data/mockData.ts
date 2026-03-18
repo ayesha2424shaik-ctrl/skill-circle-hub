@@ -78,6 +78,11 @@ export const skills: Skill[] = [
       { id: "p1", name: "CodeSandbox", description: "Online IDE for React projects.", link: "https://codesandbox.io" },
       { id: "p2", name: "StackBlitz", description: "Instant dev environment for React.", link: "https://stackblitz.com" },
     ],
+    documentation: [
+      { id: "d1", title: "React Official Documentation", description: "Complete guide to React concepts, hooks, and API reference.", link: "https://react.dev/learn", type: "official" },
+      { id: "d2", title: "React Cheat Sheet", description: "Quick reference for React hooks, lifecycle, and patterns.", link: "https://devhints.io/react", type: "cheatsheet" },
+      { id: "d3", title: "Thinking in React", description: "Step-by-step guide to building UI components the React way.", link: "https://react.dev/learn/thinking-in-react", type: "guide" },
+    ],
   },
   {
     id: "javascript",
