@@ -299,6 +299,10 @@ export const skills: Skill[] = [
       { id: "p13", name: "TypeScript Playground", description: "Online TypeScript editor and compiler.", link: "https://typescriptlang.org/play" },
       { id: "p14", name: "Exercism TypeScript", description: "Practice TypeScript with exercises.", link: "https://exercism.org/tracks/typescript" },
     ],
+    documentation: [
+      { id: "d24", title: "TypeScript Handbook", description: "The official TypeScript language handbook.", link: "https://typescriptlang.org/docs/handbook/", type: "official" },
+      { id: "d25", title: "TypeScript Cheat Sheet", description: "Quick reference for TypeScript types and syntax.", link: "https://typescriptlang.org/cheatsheets", type: "cheatsheet" },
+    ],
   },
   {
     id: "sql",
