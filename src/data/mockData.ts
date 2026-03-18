@@ -38,6 +38,14 @@ export interface CodingPlatform {
   link: string;
 }
 
+export interface Documentation {
+  id: string;
+  title: string;
+  description: string;
+  link: string;
+  type: "official" | "guide" | "cheatsheet" | "book" | "article";
+}
+
 export interface Skill {
   id: string;
   title: string;
@@ -47,6 +55,7 @@ export interface Skill {
   videos: Video[];
   resources: Resource[];
   platforms: CodingPlatform[];
+  documentation: Documentation[];
 }
 
 export const skills: Skill[] = [
