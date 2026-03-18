@@ -150,6 +150,11 @@ export const skills: Skill[] = [
       { id: "p7", name: "HackerRank - Python", description: "Practice Python coding challenges.", link: "https://hackerrank.com/domains/python" },
       { id: "p8", name: "LeetCode", description: "Solve algorithmic problems in Python.", link: "https://leetcode.com" },
     ],
+    documentation: [
+      { id: "d9", title: "Python Official Docs", description: "The definitive Python language and library reference.", link: "https://docs.python.org/3/", type: "official" },
+      { id: "d10", title: "Automate the Boring Stuff", description: "Free book on practical Python programming.", link: "https://automatetheboringstuff.com", type: "book" },
+      { id: "d11", title: "Python Cheatsheet", description: "Comprehensive Python cheatsheet with examples.", link: "https://pythoncheatsheet.org", type: "cheatsheet" },
+    ],
   },
   {
     id: "git",
