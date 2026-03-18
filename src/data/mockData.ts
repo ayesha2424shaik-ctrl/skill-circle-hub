@@ -345,6 +345,10 @@ export const skills: Skill[] = [
       { id: "p17", name: "Play with Docker", description: "Free Docker playground.", link: "https://labs.play-with-docker.com" },
       { id: "p18", name: "Katacoda Docker", description: "Interactive Docker scenarios.", link: "https://katacoda.com/courses/docker" },
     ],
+    documentation: [
+      { id: "d28", title: "Docker Official Docs", description: "Complete Docker reference and tutorials.", link: "https://docs.docker.com/get-started/", type: "official" },
+      { id: "d29", title: "Dockerfile Best Practices", description: "Official best practices for writing Dockerfiles.", link: "https://docs.docker.com/develop/develop-images/dockerfile_best-practices/", type: "guide" },
+    ],
   },
   {
     id: "dsa",
