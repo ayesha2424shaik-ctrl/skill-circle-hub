@@ -1,4 +1,5 @@
-import { Pen, Github, Twitter, Mail } from "lucide-react";
+import { Github, Twitter, Mail } from "lucide-react";
+import logo from "@/assets/logo.svg";
 import { Link } from "react-router-dom";
 
 const Footer = () => (
@@ -7,7 +8,7 @@ const Footer = () => (
       <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
         <div className="md:col-span-2">
           <div className="flex items-center gap-2 text-lg font-bold text-primary mb-3">
-            <Pen size={20} />
+            <img src={logo} alt="Skill Circle" className="w-5 h-5" />
             Skill Circle
           </div>
           <p className="text-sm text-muted-foreground max-w-sm">
