@@ -28,6 +28,7 @@ const SkillDetail = () => {
 
   const tabs: { key: Tab; label: string; icon: any; count: number }[] = [
     { key: "videos", label: "Videos", icon: MonitorPlay, count: skill.videos.length },
+    { key: "documentation", label: "Docs", icon: FileText, count: skill.documentation.length },
     { key: "resources", label: "Resources", icon: BookOpen, count: skill.resources.length },
     { key: "platforms", label: "Platforms", icon: Code2, count: skill.platforms.length },
   ];
