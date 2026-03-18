@@ -6,7 +6,7 @@ import { ArrowLeft, Play, ExternalLink, Code2, BookOpen, MonitorPlay, FileText, 
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-type Tab = "videos" | "resources" | "platforms";
+type Tab = "videos" | "resources" | "documentation" | "platforms";
 
 const SkillDetail = () => {
   const { skillId } = useParams();
