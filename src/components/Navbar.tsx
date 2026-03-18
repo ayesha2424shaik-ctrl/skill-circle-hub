@@ -32,7 +32,8 @@ const Navbar = () => {
       <div className="container mx-auto px-4 h-14 flex items-center justify-between">
         <Link to="/home" className="flex items-center gap-2 text-lg font-bold">
           <div className="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center">
-            <Pen size={16} className="text-primary-foreground" />
+            <img src={logo} alt="Skill Circle" className="w-5 h-5 brightness-0 invert" />
+          </div>
           </div>
           <span className="gradient-text">Skill Circle</span>
         </Link>

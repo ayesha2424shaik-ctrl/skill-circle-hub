@@ -56,7 +56,7 @@ const Welcome = () => (
           transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
           className="w-16 h-16 rounded-2xl gradient-bg flex items-center justify-center mx-auto mb-6 elegant-shadow"
         >
-          <Pen size={28} className="text-primary-foreground" />
+          <img src={logo} alt="Skill Circle" className="w-8 h-8 brightness-0 invert" />
         </motion.div>
 
         <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4 leading-tight">
