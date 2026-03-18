@@ -426,6 +426,9 @@ export const skills: Skill[] = [
       { id: "r32", title: "Coursera Critical Thinking", description: "University-level critical thinking courses.", link: "https://coursera.org/courses?query=critical%20thinking" },
     ],
     platforms: [],
+    documentation: [
+      { id: "d35", title: "Critical Thinking Foundations", description: "Stanford Encyclopedia of Philosophy on critical thinking.", link: "https://plato.stanford.edu/entries/critical-thinking/", type: "article" },
+    ],
   },
   {
     id: "emotional-intelligence",
