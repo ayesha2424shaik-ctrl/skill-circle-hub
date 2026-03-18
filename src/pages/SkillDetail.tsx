@@ -2,7 +2,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { skills } from "@/data/mockData";
-import { ArrowLeft, Play, ExternalLink, Code2, BookOpen, MonitorPlay, Sparkles } from "lucide-react";
+import { ArrowLeft, Play, ExternalLink, Code2, BookOpen, MonitorPlay, FileText, BookMarked, ScrollText, Newspaper } from "lucide-react";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
