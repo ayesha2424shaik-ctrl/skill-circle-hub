@@ -127,6 +127,10 @@ export const skills: Skill[] = [
       { id: "p5", name: "Replit", description: "Run Node.js projects in the browser.", link: "https://replit.com" },
       { id: "p6", name: "Glitch", description: "Build and deploy Node.js apps online.", link: "https://glitch.com" },
     ],
+    documentation: [
+      { id: "d7", title: "Node.js API Docs", description: "Complete Node.js API reference documentation.", link: "https://nodejs.org/docs/latest/api/", type: "official" },
+      { id: "d8", title: "Express.js Guide", description: "Getting started guide for Express web framework.", link: "https://expressjs.com/en/guide/routing.html", type: "guide" },
+    ],
   },
   {
     id: "python",
