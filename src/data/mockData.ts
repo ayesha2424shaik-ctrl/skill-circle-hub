@@ -275,6 +275,11 @@ export const skills: Skill[] = [
       { id: "p11", name: "CodePen", description: "Online code editor for frontend experiments.", link: "https://codepen.io" },
       { id: "p12", name: "Frontend Mentor", description: "Real-world frontend challenges.", link: "https://frontendmentor.io" },
     ],
+    documentation: [
+      { id: "d21", title: "MDN HTML Reference", description: "Complete HTML element reference guide.", link: "https://developer.mozilla.org/en-US/docs/Web/HTML", type: "official" },
+      { id: "d22", title: "CSS Complete Guide", description: "Comprehensive CSS property reference.", link: "https://developer.mozilla.org/en-US/docs/Web/CSS", type: "official" },
+      { id: "d23", title: "Flexbox Cheatsheet", description: "Visual guide to CSS Flexbox properties.", link: "https://css-tricks.com/snippets/css/a-guide-to-flexbox/", type: "cheatsheet" },
+    ],
   },
   {
     id: "typescript",
