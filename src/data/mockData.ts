@@ -322,6 +322,10 @@ export const skills: Skill[] = [
       { id: "p15", name: "SQLBolt", description: "Interactive SQL lessons.", link: "https://sqlbolt.com" },
       { id: "p16", name: "LeetCode Database", description: "SQL practice problems.", link: "https://leetcode.com/problemset/database" },
     ],
+    documentation: [
+      { id: "d26", title: "SQL Tutorial by W3Schools", description: "Beginner-friendly SQL syntax reference.", link: "https://w3schools.com/sql/", type: "guide" },
+      { id: "d27", title: "PostgreSQL Documentation", description: "Official PostgreSQL reference manual.", link: "https://postgresql.org/docs/current/", type: "official" },
+    ],
   },
   {
     id: "docker",
