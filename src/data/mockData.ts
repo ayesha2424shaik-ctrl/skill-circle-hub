@@ -252,6 +252,10 @@ export const skills: Skill[] = [
       { id: "r17", title: "MindTools Leadership", description: "Leadership skills and techniques.", link: "https://mindtools.com/leadership" },
     ],
     platforms: [],
+    documentation: [
+      { id: "d19", title: "Leadership Principles", description: "Amazon's leadership principles and framework.", link: "https://amazon.jobs/content/en/our-workplace/leadership-principles", type: "article" },
+      { id: "d20", title: "Servant Leadership Guide", description: "Guide to leading by serving your team.", link: "https://greenleaf.org/what-is-servant-leadership/", type: "guide" },
+    ],
   },
   {
     id: "html-css",
