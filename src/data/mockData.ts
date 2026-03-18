@@ -407,6 +407,9 @@ export const skills: Skill[] = [
       { id: "r30", title: "Mind Tools Problem Solving", description: "Problem solving techniques and tools.", link: "https://mindtools.com/problem-solving" },
     ],
     platforms: [],
+    documentation: [
+      { id: "d34", title: "Problem Solving Framework", description: "Structured approach to tackling complex problems.", link: "https://mindtools.com/pages/article/newTMC_00.htm", type: "guide" },
+    ],
   },
   {
     id: "critical-thinking",
