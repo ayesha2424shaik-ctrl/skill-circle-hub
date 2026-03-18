@@ -1,4 +1,5 @@
-import { Pen, Github, Twitter, Mail } from "lucide-react";
+import { Github, Twitter, Mail } from "lucide-react";
+import logo from "@/assets/logo.svg";
 import { Link } from "react-router-dom";
 
 const Footer = () => (
