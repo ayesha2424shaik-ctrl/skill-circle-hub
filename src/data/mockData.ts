@@ -445,6 +445,10 @@ export const skills: Skill[] = [
       { id: "r34", title: "Greater Good Magazine", description: "Science-based insights on well-being and EQ.", link: "https://greatergood.berkeley.edu" },
     ],
     platforms: [],
+    documentation: [
+      { id: "d36", title: "Emotional Intelligence 2.0", description: "Strategies to increase your emotional intelligence.", link: "https://talentsmarteq.com/product/emotional-intelligence-2-0/", type: "book" },
+      { id: "d37", title: "Yale Center for EQ", description: "Research and resources on emotional intelligence.", link: "https://ycei.org", type: "article" },
+    ],
   },
 ];
 
