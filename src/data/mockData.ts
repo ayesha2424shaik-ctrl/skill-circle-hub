@@ -103,6 +103,11 @@ export const skills: Skill[] = [
       { id: "p3", name: "freeCodeCamp", description: "Free interactive JavaScript lessons.", link: "https://freecodecamp.org" },
       { id: "p4", name: "Exercism", description: "Practice JS with mentored exercises.", link: "https://exercism.org/tracks/javascript" },
     ],
+    documentation: [
+      { id: "d4", title: "MDN JavaScript Reference", description: "Complete JavaScript language reference and Web APIs.", link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", type: "official" },
+      { id: "d5", title: "You Don't Know JS", description: "Deep dive book series into JavaScript mechanics.", link: "https://github.com/getify/You-Dont-Know-JS", type: "book" },
+      { id: "d6", title: "ES6 Features Cheatsheet", description: "Quick overview of all ES6+ features with examples.", link: "https://es6-features.org", type: "cheatsheet" },
+    ],
   },
   {
     id: "nodejs",
