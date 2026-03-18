@@ -146,6 +146,46 @@ const SkillDetail = () => {
             </motion.a>
           ))}
 
+          {activeTab === "documentation" && skill.documentation.map((d, i) => {
+            const typeConfig: Record<string, { icon: typeof BookMarked; color: string }> = {
+              official: { icon: BookMarked, color: "bg-primary/10 text-primary" },
+              guide: { icon: BookOpen, color: "bg-emerald-500/10 text-emerald-600" },
+              cheatsheet: { icon: ScrollText, color: "bg-amber-500/10 text-amber-600" },
+              book: { icon: FileText, color: "bg-blue-500/10 text-blue-600" },
+              article: { icon: Newspaper, color: "bg-rose-500/10 text-rose-600" },
+            };
+            const cfg = typeConfig[d.type] || typeConfig.article;
+            const Icon = cfg.icon;
+            return (
+              <motion.a
+                key={d.id}
+                href={d.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.05 }}
+                className="glass-card rounded-xl p-5 hover:border-primary/30 transition-all group hover-lift"
+              >
+                <div className="flex items-start justify-between gap-3">
+                  <div className="flex items-start gap-3">
+                    <div className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 ${cfg.color}`}>
+                      <Icon size={18} />
+                    </div>
+                    <div>
+                      <h3 className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">{d.title}</h3>
+                      <p className="text-xs text-muted-foreground mt-1">{d.description}</p>
+                      <span className={`inline-block mt-2 text-[10px] font-semibold px-2 py-0.5 rounded-full ${cfg.color}`}>
+                        {d.type.charAt(0).toUpperCase() + d.type.slice(1)}
+                      </span>
+                    </div>
+                  </div>
+                  <ExternalLink size={14} className="text-muted-foreground shrink-0 mt-1" />
+                </div>
+              </motion.a>
+            );
+          })}
+
           {activeTab === "platforms" && skill.platforms.map((p, i) => (
             <motion.a
               key={p.id}
