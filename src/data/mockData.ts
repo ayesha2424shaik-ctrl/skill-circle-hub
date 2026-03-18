@@ -38,6 +38,14 @@ export interface CodingPlatform {
   link: string;
 }
 
+export interface Documentation {
+  id: string;
+  title: string;
+  description: string;
+  link: string;
+  type: "official" | "guide" | "cheatsheet" | "book" | "article";
+}
+
 export interface Skill {
   id: string;
   title: string;
@@ -47,6 +55,7 @@ export interface Skill {
   videos: Video[];
   resources: Resource[];
   platforms: CodingPlatform[];
+  documentation: Documentation[];
 }
 
 export const skills: Skill[] = [
@@ -69,6 +78,11 @@ export const skills: Skill[] = [
       { id: "p1", name: "CodeSandbox", description: "Online IDE for React projects.", link: "https://codesandbox.io" },
       { id: "p2", name: "StackBlitz", description: "Instant dev environment for React.", link: "https://stackblitz.com" },
     ],
+    documentation: [
+      { id: "d1", title: "React Official Documentation", description: "Complete guide to React concepts, hooks, and API reference.", link: "https://react.dev/learn", type: "official" },
+      { id: "d2", title: "React Cheat Sheet", description: "Quick reference for React hooks, lifecycle, and patterns.", link: "https://devhints.io/react", type: "cheatsheet" },
+      { id: "d3", title: "Thinking in React", description: "Step-by-step guide to building UI components the React way.", link: "https://react.dev/learn/thinking-in-react", type: "guide" },
+    ],
   },
   {
     id: "javascript",
@@ -89,6 +103,11 @@ export const skills: Skill[] = [
       { id: "p3", name: "freeCodeCamp", description: "Free interactive JavaScript lessons.", link: "https://freecodecamp.org" },
       { id: "p4", name: "Exercism", description: "Practice JS with mentored exercises.", link: "https://exercism.org/tracks/javascript" },
     ],
+    documentation: [
+      { id: "d4", title: "MDN JavaScript Reference", description: "Complete JavaScript language reference and Web APIs.", link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", type: "official" },
+      { id: "d5", title: "You Don't Know JS", description: "Deep dive book series into JavaScript mechanics.", link: "https://github.com/getify/You-Dont-Know-JS", type: "book" },
+      { id: "d6", title: "ES6 Features Cheatsheet", description: "Quick overview of all ES6+ features with examples.", link: "https://es6-features.org", type: "cheatsheet" },
+    ],
   },
   {
     id: "nodejs",
@@ -107,6 +126,10 @@ export const skills: Skill[] = [
     platforms: [
       { id: "p5", name: "Replit", description: "Run Node.js projects in the browser.", link: "https://replit.com" },
       { id: "p6", name: "Glitch", description: "Build and deploy Node.js apps online.", link: "https://glitch.com" },
+    ],
+    documentation: [
+      { id: "d7", title: "Node.js API Docs", description: "Complete Node.js API reference documentation.", link: "https://nodejs.org/docs/latest/api/", type: "official" },
+      { id: "d8", title: "Express.js Guide", description: "Getting started guide for Express web framework.", link: "https://expressjs.com/en/guide/routing.html", type: "guide" },
     ],
   },
   {
@@ -127,6 +150,11 @@ export const skills: Skill[] = [
       { id: "p7", name: "HackerRank - Python", description: "Practice Python coding challenges.", link: "https://hackerrank.com/domains/python" },
       { id: "p8", name: "LeetCode", description: "Solve algorithmic problems in Python.", link: "https://leetcode.com" },
     ],
+    documentation: [
+      { id: "d9", title: "Python Official Docs", description: "The definitive Python language and library reference.", link: "https://docs.python.org/3/", type: "official" },
+      { id: "d10", title: "Automate the Boring Stuff", description: "Free book on practical Python programming.", link: "https://automatetheboringstuff.com", type: "book" },
+      { id: "d11", title: "Python Cheatsheet", description: "Comprehensive Python cheatsheet with examples.", link: "https://pythoncheatsheet.org", type: "cheatsheet" },
+    ],
   },
   {
     id: "git",
@@ -146,6 +174,10 @@ export const skills: Skill[] = [
       { id: "p9", name: "Learn Git Branching", description: "Interactive Git branching tutorial.", link: "https://learngitbranching.js.org" },
       { id: "p10", name: "GitHub Skills", description: "Learn GitHub with hands-on courses.", link: "https://skills.github.com" },
     ],
+    documentation: [
+      { id: "d12", title: "Pro Git Book", description: "The entire Pro Git book, free and open source.", link: "https://git-scm.com/book/en/v2", type: "book" },
+      { id: "d13", title: "Git Cheat Sheet", description: "Quick reference for everyday Git commands.", link: "https://education.github.com/git-cheat-sheet-education.pdf", type: "cheatsheet" },
+    ],
   },
   {
     id: "communication",
@@ -162,6 +194,10 @@ export const skills: Skill[] = [
       { id: "r12", title: "Grammarly Blog", description: "Writing tips and communication guides.", link: "https://grammarly.com/blog" },
     ],
     platforms: [],
+    documentation: [
+      { id: "d14", title: "Communication Skills Guide", description: "Harvard guide to effective workplace communication.", link: "https://hbr.org/topic/communication", type: "guide" },
+      { id: "d15", title: "Business Writing Handbook", description: "Principles of clear and professional writing.", link: "https://owl.purdue.edu/owl/subject_specific_writing/professional_technical_writing/", type: "article" },
+    ],
   },
   {
     id: "public-speaking",
@@ -178,6 +214,9 @@ export const skills: Skill[] = [
       { id: "r14", title: "TED Talks", description: "Watch inspiring talks on ideas worth spreading.", link: "https://ted.com" },
     ],
     platforms: [],
+    documentation: [
+      { id: "d16", title: "Art of Public Speaking", description: "Classic guide to mastering public speaking.", link: "https://www.toastmasters.org/resources", type: "guide" },
+    ],
   },
   {
     id: "time-management",
@@ -193,6 +232,10 @@ export const skills: Skill[] = [
       { id: "r15", title: "Todoist Productivity Guide", description: "Practical productivity methods and tips.", link: "https://todoist.com/productivity-methods" },
     ],
     platforms: [],
+    documentation: [
+      { id: "d17", title: "Getting Things Done", description: "David Allen's productivity methodology explained.", link: "https://gettingthingsdone.com", type: "book" },
+      { id: "d18", title: "Pomodoro Technique Guide", description: "Official guide to the Pomodoro time management method.", link: "https://francescocirillo.com/products/the-pomodoro-technique", type: "guide" },
+    ],
   },
   {
     id: "leadership",
@@ -209,6 +252,10 @@ export const skills: Skill[] = [
       { id: "r17", title: "MindTools Leadership", description: "Leadership skills and techniques.", link: "https://mindtools.com/leadership" },
     ],
     platforms: [],
+    documentation: [
+      { id: "d19", title: "Leadership Principles", description: "Amazon's leadership principles and framework.", link: "https://amazon.jobs/content/en/our-workplace/leadership-principles", type: "article" },
+      { id: "d20", title: "Servant Leadership Guide", description: "Guide to leading by serving your team.", link: "https://greenleaf.org/what-is-servant-leadership/", type: "guide" },
+    ],
   },
   {
     id: "html-css",
@@ -227,6 +274,11 @@ export const skills: Skill[] = [
     platforms: [
       { id: "p11", name: "CodePen", description: "Online code editor for frontend experiments.", link: "https://codepen.io" },
       { id: "p12", name: "Frontend Mentor", description: "Real-world frontend challenges.", link: "https://frontendmentor.io" },
+    ],
+    documentation: [
+      { id: "d21", title: "MDN HTML Reference", description: "Complete HTML element reference guide.", link: "https://developer.mozilla.org/en-US/docs/Web/HTML", type: "official" },
+      { id: "d22", title: "CSS Complete Guide", description: "Comprehensive CSS property reference.", link: "https://developer.mozilla.org/en-US/docs/Web/CSS", type: "official" },
+      { id: "d23", title: "Flexbox Cheatsheet", description: "Visual guide to CSS Flexbox properties.", link: "https://css-tricks.com/snippets/css/a-guide-to-flexbox/", type: "cheatsheet" },
     ],
   },
   {
@@ -247,6 +299,10 @@ export const skills: Skill[] = [
       { id: "p13", name: "TypeScript Playground", description: "Online TypeScript editor and compiler.", link: "https://typescriptlang.org/play" },
       { id: "p14", name: "Exercism TypeScript", description: "Practice TypeScript with exercises.", link: "https://exercism.org/tracks/typescript" },
     ],
+    documentation: [
+      { id: "d24", title: "TypeScript Handbook", description: "The official TypeScript language handbook.", link: "https://typescriptlang.org/docs/handbook/", type: "official" },
+      { id: "d25", title: "TypeScript Cheat Sheet", description: "Quick reference for TypeScript types and syntax.", link: "https://typescriptlang.org/cheatsheets", type: "cheatsheet" },
+    ],
   },
   {
     id: "sql",
@@ -265,6 +321,10 @@ export const skills: Skill[] = [
     platforms: [
       { id: "p15", name: "SQLBolt", description: "Interactive SQL lessons.", link: "https://sqlbolt.com" },
       { id: "p16", name: "LeetCode Database", description: "SQL practice problems.", link: "https://leetcode.com/problemset/database" },
+    ],
+    documentation: [
+      { id: "d26", title: "SQL Tutorial by W3Schools", description: "Beginner-friendly SQL syntax reference.", link: "https://w3schools.com/sql/", type: "guide" },
+      { id: "d27", title: "PostgreSQL Documentation", description: "Official PostgreSQL reference manual.", link: "https://postgresql.org/docs/current/", type: "official" },
     ],
   },
   {
@@ -285,6 +345,10 @@ export const skills: Skill[] = [
       { id: "p17", name: "Play with Docker", description: "Free Docker playground.", link: "https://labs.play-with-docker.com" },
       { id: "p18", name: "Katacoda Docker", description: "Interactive Docker scenarios.", link: "https://katacoda.com/courses/docker" },
     ],
+    documentation: [
+      { id: "d28", title: "Docker Official Docs", description: "Complete Docker reference and tutorials.", link: "https://docs.docker.com/get-started/", type: "official" },
+      { id: "d29", title: "Dockerfile Best Practices", description: "Official best practices for writing Dockerfiles.", link: "https://docs.docker.com/develop/develop-images/dockerfile_best-practices/", type: "guide" },
+    ],
   },
   {
     id: "dsa",
@@ -304,6 +368,11 @@ export const skills: Skill[] = [
       { id: "p19", name: "LeetCode", description: "Coding interview preparation.", link: "https://leetcode.com" },
       { id: "p20", name: "HackerRank DSA", description: "Data structures and algorithms practice.", link: "https://hackerrank.com/domains/data-structures" },
     ],
+    documentation: [
+      { id: "d30", title: "Introduction to Algorithms", description: "CLRS — the definitive algorithms textbook reference.", link: "https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/", type: "book" },
+      { id: "d31", title: "Big-O Cheat Sheet", description: "Time and space complexity reference for data structures.", link: "https://bigocheatsheet.com", type: "cheatsheet" },
+      { id: "d32", title: "VisuAlgo", description: "Visualize data structures and algorithms step by step.", link: "https://visualgo.net", type: "guide" },
+    ],
   },
   {
     id: "teamwork",
@@ -320,6 +389,9 @@ export const skills: Skill[] = [
       { id: "r29", title: "Atlassian Team Playbook", description: "Team collaboration best practices.", link: "https://atlassian.com/team-playbook" },
     ],
     platforms: [],
+    documentation: [
+      { id: "d33", title: "Google's Guide to Teamwork", description: "Project Aristotle findings on effective teams.", link: "https://rework.withgoogle.com/guides/understanding-team-effectiveness/", type: "article" },
+    ],
   },
   {
     id: "problem-solving",
@@ -335,6 +407,9 @@ export const skills: Skill[] = [
       { id: "r30", title: "Mind Tools Problem Solving", description: "Problem solving techniques and tools.", link: "https://mindtools.com/problem-solving" },
     ],
     platforms: [],
+    documentation: [
+      { id: "d34", title: "Problem Solving Framework", description: "Structured approach to tackling complex problems.", link: "https://mindtools.com/pages/article/newTMC_00.htm", type: "guide" },
+    ],
   },
   {
     id: "critical-thinking",
@@ -351,6 +426,9 @@ export const skills: Skill[] = [
       { id: "r32", title: "Coursera Critical Thinking", description: "University-level critical thinking courses.", link: "https://coursera.org/courses?query=critical%20thinking" },
     ],
     platforms: [],
+    documentation: [
+      { id: "d35", title: "Critical Thinking Foundations", description: "Stanford Encyclopedia of Philosophy on critical thinking.", link: "https://plato.stanford.edu/entries/critical-thinking/", type: "article" },
+    ],
   },
   {
     id: "emotional-intelligence",
@@ -367,6 +445,10 @@ export const skills: Skill[] = [
       { id: "r34", title: "Greater Good Magazine", description: "Science-based insights on well-being and EQ.", link: "https://greatergood.berkeley.edu" },
     ],
     platforms: [],
+    documentation: [
+      { id: "d36", title: "Emotional Intelligence 2.0", description: "Strategies to increase your emotional intelligence.", link: "https://talentsmarteq.com/product/emotional-intelligence-2-0/", type: "book" },
+      { id: "d37", title: "Yale Center for EQ", description: "Research and resources on emotional intelligence.", link: "https://ycei.org", type: "article" },
+    ],
   },
 ];
 
