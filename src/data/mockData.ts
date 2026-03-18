@@ -368,6 +368,11 @@ export const skills: Skill[] = [
       { id: "p19", name: "LeetCode", description: "Coding interview preparation.", link: "https://leetcode.com" },
       { id: "p20", name: "HackerRank DSA", description: "Data structures and algorithms practice.", link: "https://hackerrank.com/domains/data-structures" },
     ],
+    documentation: [
+      { id: "d30", title: "Introduction to Algorithms", description: "CLRS — the definitive algorithms textbook reference.", link: "https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/", type: "book" },
+      { id: "d31", title: "Big-O Cheat Sheet", description: "Time and space complexity reference for data structures.", link: "https://bigocheatsheet.com", type: "cheatsheet" },
+      { id: "d32", title: "VisuAlgo", description: "Visualize data structures and algorithms step by step.", link: "https://visualgo.net", type: "guide" },
+    ],
   },
   {
     id: "teamwork",
