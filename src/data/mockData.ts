@@ -389,6 +389,9 @@ export const skills: Skill[] = [
       { id: "r29", title: "Atlassian Team Playbook", description: "Team collaboration best practices.", link: "https://atlassian.com/team-playbook" },
     ],
     platforms: [],
+    documentation: [
+      { id: "d33", title: "Google's Guide to Teamwork", description: "Project Aristotle findings on effective teams.", link: "https://rework.withgoogle.com/guides/understanding-team-effectiveness/", type: "article" },
+    ],
   },
   {
     id: "problem-solving",
