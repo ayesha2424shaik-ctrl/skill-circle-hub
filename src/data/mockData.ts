@@ -174,6 +174,10 @@ export const skills: Skill[] = [
       { id: "p9", name: "Learn Git Branching", description: "Interactive Git branching tutorial.", link: "https://learngitbranching.js.org" },
       { id: "p10", name: "GitHub Skills", description: "Learn GitHub with hands-on courses.", link: "https://skills.github.com" },
     ],
+    documentation: [
+      { id: "d12", title: "Pro Git Book", description: "The entire Pro Git book, free and open source.", link: "https://git-scm.com/book/en/v2", type: "book" },
+      { id: "d13", title: "Git Cheat Sheet", description: "Quick reference for everyday Git commands.", link: "https://education.github.com/git-cheat-sheet-education.pdf", type: "cheatsheet" },
+    ],
   },
   {
     id: "communication",
