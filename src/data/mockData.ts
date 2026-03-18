@@ -194,6 +194,10 @@ export const skills: Skill[] = [
       { id: "r12", title: "Grammarly Blog", description: "Writing tips and communication guides.", link: "https://grammarly.com/blog" },
     ],
     platforms: [],
+    documentation: [
+      { id: "d14", title: "Communication Skills Guide", description: "Harvard guide to effective workplace communication.", link: "https://hbr.org/topic/communication", type: "guide" },
+      { id: "d15", title: "Business Writing Handbook", description: "Principles of clear and professional writing.", link: "https://owl.purdue.edu/owl/subject_specific_writing/professional_technical_writing/", type: "article" },
+    ],
   },
   {
     id: "public-speaking",
