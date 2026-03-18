@@ -214,6 +214,9 @@ export const skills: Skill[] = [
       { id: "r14", title: "TED Talks", description: "Watch inspiring talks on ideas worth spreading.", link: "https://ted.com" },
     ],
     platforms: [],
+    documentation: [
+      { id: "d16", title: "Art of Public Speaking", description: "Classic guide to mastering public speaking.", link: "https://www.toastmasters.org/resources", type: "guide" },
+    ],
   },
   {
     id: "time-management",
