@@ -1,9 +1,11 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "@/context/AuthContext";
-import { LogOut, Home, BookOpen, LayoutDashboard, Menu, X, Bell } from "lucide-react";
+import { LogOut, Home, BookOpen, LayoutDashboard, Menu, X, Bell, User, Bookmark, Sun, Moon } from "lucide-react";
 import logo from "@/assets/logo.svg";
 import { useState } from "react";
 import { useNotifications } from "@/context/NotificationContext";
+import { useTheme } from "@/context/ThemeContext";
+import { useGamification } from "@/context/GamificationContext";
 
 const Navbar = () => {
   const { user, logout } = useAuth();
@@ -12,6 +14,8 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const { notifications, unreadCount, markAllRead } = useNotifications();
   const [showNotifs, setShowNotifs] = useState(false);
+  const { theme, toggleTheme } = useTheme();
+  const { state } = useGamification();
 
   const handleLogout = () => { logout(); navigate("/"); };
   if (!user) return null;
@@ -20,6 +24,7 @@ const Navbar = () => {
     { to: "/home", label: "Home", icon: Home },
     { to: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
     { to: "/sources", label: "Sources", icon: BookOpen },
+    { to: "/saved", label: "Saved", icon: Bookmark },
   ];
 
   const linkClass = (path: string) =>
@@ -34,7 +39,7 @@ const Navbar = () => {
           <div className="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center">
             <img src={logo} alt="Skill Circle" className="w-5 h-5 brightness-0 invert" />
           </div>
-          <span className="gradient-text">Skill Circle</span>
+          <span className="gradient-text hidden sm:inline">Skill Circle</span>
         </Link>
 
         <div className="hidden md:flex items-center gap-1">
@@ -44,8 +49,18 @@ const Navbar = () => {
             </Link>
           ))}
 
+          {/* Level badge */}
+          <div className="ml-1 px-2.5 py-1 rounded-lg bg-primary/10 text-primary text-[10px] font-bold">
+            Lv.{state.level} • {state.points}pts
+          </div>
+
+          {/* Theme toggle */}
+          <button onClick={toggleTheme} className="p-2 rounded-xl text-muted-foreground hover:text-foreground hover:bg-muted transition-all ml-1">
+            {theme === "light" ? <Moon size={16} /> : <Sun size={16} />}
+          </button>
+
           {/* Notification bell */}
-          <div className="relative ml-2">
+          <div className="relative">
             <button
               onClick={() => { setShowNotifs(!showNotifs); if (!showNotifs) markAllRead(); }}
               className="relative p-2 rounded-xl text-muted-foreground hover:text-foreground hover:bg-muted transition-all"
@@ -76,14 +91,24 @@ const Navbar = () => {
             )}
           </div>
 
+          {/* Profile */}
+          <Link to="/profile" className={`p-2 rounded-xl transition-all ${location.pathname === "/profile" ? "text-primary" : "text-muted-foreground hover:text-foreground hover:bg-muted"}`}>
+            <User size={16} />
+          </Link>
+
           <button onClick={handleLogout} className="flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-medium text-muted-foreground hover:text-destructive hover:bg-muted transition-all ml-1">
             <LogOut size={16} /> Logout
           </button>
         </div>
 
-        <button onClick={() => setMobileOpen(!mobileOpen)} className="md:hidden text-foreground">
-          {mobileOpen ? <X size={22} /> : <Menu size={22} />}
-        </button>
+        <div className="flex items-center gap-2 md:hidden">
+          <button onClick={toggleTheme} className="p-2 rounded-xl text-muted-foreground">
+            {theme === "light" ? <Moon size={18} /> : <Sun size={18} />}
+          </button>
+          <button onClick={() => setMobileOpen(!mobileOpen)} className="text-foreground">
+            {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </div>
 
       {mobileOpen && (
@@ -93,6 +118,9 @@ const Navbar = () => {
               <l.icon size={16} /> {l.label}
             </Link>
           ))}
+          <Link to="/profile" onClick={() => setMobileOpen(false)} className={linkClass("/profile") + " w-full"}>
+            <User size={16} /> Profile
+          </Link>
           <button onClick={handleLogout} className="flex items-center gap-2 px-3 py-2 rounded-xl text-sm text-muted-foreground hover:text-destructive w-full">
             <LogOut size={16} /> Logout
           </button>

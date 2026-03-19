@@ -52,6 +52,7 @@ export interface Skill {
   description: string;
   thumbnail: string;
   category: "tech" | "nontech";
+  difficulty: "Beginner" | "Intermediate" | "Advanced";
   videos: Video[];
   resources: Resource[];
   platforms: CodingPlatform[];
@@ -65,6 +66,7 @@ export const skills: Skill[] = [
     description: "Build modern user interfaces with React's component-based architecture.",
     thumbnail: reactThumb,
     category: "tech",
+    difficulty: "Intermediate",
     videos: [
       { id: "v1", title: "React Fundamentals", description: "Learn components, props, and state management.", videoLink: "https://www.youtube.com/watch?v=Ke90Tje7VS0" },
       { id: "v2", title: "React Hooks Deep Dive", description: "Master useState, useEffect, and custom hooks.", videoLink: "https://www.youtube.com/watch?v=TNhaISOUy6Q" },
@@ -90,6 +92,7 @@ export const skills: Skill[] = [
     description: "Master the language of the web with modern ES6+ features.",
     thumbnail: jsThumb,
     category: "tech",
+    difficulty: "Beginner",
     videos: [
       { id: "v4", title: "JavaScript ES6+ Features", description: "Arrow functions, destructuring, async/await and more.", videoLink: "https://www.youtube.com/watch?v=NCwa_xi0Uuc" },
       { id: "v5", title: "JavaScript DOM Manipulation", description: "Learn to interact with the browser DOM.", videoLink: "https://www.youtube.com/watch?v=5fb2aPlgoys" },
@@ -115,6 +118,7 @@ export const skills: Skill[] = [
     description: "Build server-side applications with JavaScript runtime.",
     thumbnail: nodejsThumb,
     category: "tech",
+    difficulty: "Intermediate",
     videos: [
       { id: "v7", title: "Node.js Crash Course", description: "Build server-side apps and understand the event loop.", videoLink: "https://www.youtube.com/watch?v=fBNz5xF-Kx4" },
       { id: "v8", title: "REST API with Node.js", description: "Create RESTful APIs using Express.js.", videoLink: "https://www.youtube.com/watch?v=pKd0Rpw7O48" },
@@ -138,6 +142,7 @@ export const skills: Skill[] = [
     description: "Start your programming journey with Python's clean syntax.",
     thumbnail: pythonThumb,
     category: "tech",
+    difficulty: "Beginner",
     videos: [
       { id: "v9", title: "Python for Beginners", description: "Learn Python basics from scratch.", videoLink: "https://www.youtube.com/watch?v=kqtD5dpn9C8" },
       { id: "v10", title: "Python Projects for Beginners", description: "Build real projects with Python.", videoLink: "https://www.youtube.com/watch?v=8ext9G7xspg" },
@@ -162,6 +167,7 @@ export const skills: Skill[] = [
     description: "Learn Git workflows, branching, and collaboration techniques.",
     thumbnail: gitThumb,
     category: "tech",
+    difficulty: "Beginner",
     videos: [
       { id: "v11", title: "Git & GitHub Crash Course", description: "Learn Git fundamentals and GitHub workflows.", videoLink: "https://www.youtube.com/watch?v=RGOj5yH7evk" },
       { id: "v12", title: "Advanced Git Techniques", description: "Rebasing, cherry-pick, and advanced merging.", videoLink: "https://www.youtube.com/watch?v=qsTthZi23VE" },
@@ -185,6 +191,7 @@ export const skills: Skill[] = [
     description: "Develop effective verbal and written communication.",
     thumbnail: communicationThumb,
     category: "nontech",
+    difficulty: "Beginner",
     videos: [
       { id: "v13", title: "Effective Communication", description: "Master professional communication techniques.", videoLink: "https://www.youtube.com/watch?v=HAnw168huqA" },
       { id: "v14", title: "Business Writing Skills", description: "Write clear, professional emails and documents.", videoLink: "https://www.youtube.com/watch?v=so4IlhMqmS8" },
@@ -205,6 +212,7 @@ export const skills: Skill[] = [
     description: "Overcome stage fright and deliver compelling presentations.",
     thumbnail: speakingThumb,
     category: "nontech",
+    difficulty: "Intermediate",
     videos: [
       { id: "v15", title: "TED's Secret to Great Speaking", description: "Learn what makes TED talks so compelling.", videoLink: "https://www.youtube.com/watch?v=-FOCpMAww28" },
       { id: "v16", title: "Public Speaking Tips", description: "Practical tips to improve your presentations.", videoLink: "https://www.youtube.com/watch?v=tShavGuo0_E" },
@@ -224,6 +232,7 @@ export const skills: Skill[] = [
     description: "Master productivity techniques to maximize every day.",
     thumbnail: timemgmtThumb,
     category: "nontech",
+    difficulty: "Beginner",
     videos: [
       { id: "v17", title: "Time Management Masterclass", description: "Learn proven productivity strategies.", videoLink: "https://www.youtube.com/watch?v=iONDebHX9qk" },
       { id: "v18", title: "The Pomodoro Technique", description: "Use time-boxing to boost focus and output.", videoLink: "https://www.youtube.com/watch?v=mNBmG24djoY" },
@@ -243,6 +252,7 @@ export const skills: Skill[] = [
     description: "Build leadership skills that inspire teams and drive results.",
     thumbnail: leadershipThumb,
     category: "nontech",
+    difficulty: "Advanced",
     videos: [
       { id: "v19", title: "Leadership Skills", description: "Essential leadership qualities for any role.", videoLink: "https://www.youtube.com/watch?v=pYKH2uSax8U" },
       { id: "v20", title: "How Great Leaders Inspire", description: "Simon Sinek's golden circle of leadership.", videoLink: "https://www.youtube.com/watch?v=qp0HIF3SfI4" },
@@ -263,6 +273,7 @@ export const skills: Skill[] = [
     description: "Master the building blocks of web design and styling.",
     thumbnail: htmlCssThumb,
     category: "tech",
+    difficulty: "Beginner",
     videos: [
       { id: "v21", title: "HTML & CSS Full Course", description: "Complete guide to building websites.", videoLink: "https://www.youtube.com/watch?v=mU6anWqZJcc" },
       { id: "v22", title: "CSS Flexbox & Grid", description: "Modern layout techniques for responsive design.", videoLink: "https://www.youtube.com/watch?v=3YW65K6LcIA" },
@@ -287,6 +298,7 @@ export const skills: Skill[] = [
     description: "Add static typing to JavaScript for safer, more scalable code.",
     thumbnail: typescriptThumb,
     category: "tech",
+    difficulty: "Intermediate",
     videos: [
       { id: "v23", title: "TypeScript for Beginners", description: "Learn TypeScript fundamentals from scratch.", videoLink: "https://www.youtube.com/watch?v=d56mG7DezGs" },
       { id: "v24", title: "TypeScript with React", description: "Build type-safe React applications.", videoLink: "https://www.youtube.com/watch?v=TPACABQTHvM" },
@@ -310,6 +322,7 @@ export const skills: Skill[] = [
     description: "Learn to work with relational databases and query data.",
     thumbnail: sqlThumb,
     category: "tech",
+    difficulty: "Intermediate",
     videos: [
       { id: "v25", title: "SQL Full Course", description: "Complete SQL tutorial for beginners.", videoLink: "https://www.youtube.com/watch?v=HXV3zeQKqGY" },
       { id: "v26", title: "Database Design", description: "Learn to design efficient database schemas.", videoLink: "https://www.youtube.com/watch?v=ztHopE5Wnpc" },
@@ -333,6 +346,7 @@ export const skills: Skill[] = [
     description: "Learn to containerize applications for consistent deployment.",
     thumbnail: dockerThumb,
     category: "tech",
+    difficulty: "Advanced",
     videos: [
       { id: "v27", title: "Docker Tutorial for Beginners", description: "Complete Docker crash course.", videoLink: "https://www.youtube.com/watch?v=3c-iBn73dDE" },
       { id: "v28", title: "Docker Compose", description: "Manage multi-container applications.", videoLink: "https://www.youtube.com/watch?v=SXwC9fSwct8" },
@@ -356,6 +370,7 @@ export const skills: Skill[] = [
     description: "Master fundamental CS concepts for coding interviews.",
     thumbnail: dsaThumb,
     category: "tech",
+    difficulty: "Advanced",
     videos: [
       { id: "v29", title: "Data Structures Full Course", description: "Complete guide to data structures.", videoLink: "https://www.youtube.com/watch?v=RBSGKlAvoiM" },
       { id: "v30", title: "Algorithm Techniques", description: "Common algorithm patterns and approaches.", videoLink: "https://www.youtube.com/watch?v=8hly31xKli0" },
@@ -380,6 +395,7 @@ export const skills: Skill[] = [
     description: "Learn to work effectively in teams and collaborate.",
     thumbnail: teamworkThumb,
     category: "nontech",
+    difficulty: "Beginner",
     videos: [
       { id: "v31", title: "Teamwork Skills", description: "Essential skills for effective collaboration.", videoLink: "https://www.youtube.com/watch?v=yyw0xeOwVd0" },
       { id: "v32", title: "Remote Team Collaboration", description: "Collaborate effectively in remote settings.", videoLink: "https://www.youtube.com/watch?v=a9TRj8RFy3I" },
@@ -399,6 +415,7 @@ export const skills: Skill[] = [
     description: "Develop analytical thinking and creative solutions.",
     thumbnail: problemSolvingThumb,
     category: "nontech",
+    difficulty: "Intermediate",
     videos: [
       { id: "v33", title: "Problem Solving Techniques", description: "Structured approaches to solving problems.", videoLink: "https://www.youtube.com/watch?v=UFdR8w_R1HA" },
       { id: "v34", title: "Creative Problem Solving", description: "Think outside the box for innovative solutions.", videoLink: "https://www.youtube.com/watch?v=9k_jABNk6tc" },
@@ -417,6 +434,7 @@ export const skills: Skill[] = [
     description: "Enhance analytical and logical reasoning abilities.",
     thumbnail: criticalThinkingThumb,
     category: "nontech",
+    difficulty: "Advanced",
     videos: [
       { id: "v35", title: "Critical Thinking Skills", description: "Develop better reasoning and analysis.", videoLink: "https://www.youtube.com/watch?v=Cum3k-Wglfw" },
       { id: "v36", title: "Logical Reasoning", description: "Improve your logical thinking abilities.", videoLink: "https://www.youtube.com/watch?v=bCqLnNJws5o" },
@@ -436,6 +454,7 @@ export const skills: Skill[] = [
     description: "Build self-awareness and empathy for better relationships.",
     thumbnail: emotionalIntelligenceThumb,
     category: "nontech",
+    difficulty: "Intermediate",
     videos: [
       { id: "v37", title: "Emotional Intelligence Explained", description: "Understanding and developing EQ.", videoLink: "https://www.youtube.com/watch?v=Y7m9eNoB3NU" },
       { id: "v38", title: "Building Empathy", description: "Develop empathy and emotional awareness.", videoLink: "https://www.youtube.com/watch?v=1Evwgu369Jw" },
