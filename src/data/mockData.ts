@@ -273,6 +273,7 @@ export const skills: Skill[] = [
     description: "Master the building blocks of web design and styling.",
     thumbnail: htmlCssThumb,
     category: "tech",
+    difficulty: "Beginner",
     videos: [
       { id: "v21", title: "HTML & CSS Full Course", description: "Complete guide to building websites.", videoLink: "https://www.youtube.com/watch?v=mU6anWqZJcc" },
       { id: "v22", title: "CSS Flexbox & Grid", description: "Modern layout techniques for responsive design.", videoLink: "https://www.youtube.com/watch?v=3YW65K6LcIA" },
