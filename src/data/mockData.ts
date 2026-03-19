@@ -434,6 +434,7 @@ export const skills: Skill[] = [
     description: "Enhance analytical and logical reasoning abilities.",
     thumbnail: criticalThinkingThumb,
     category: "nontech",
+    difficulty: "Advanced",
     videos: [
       { id: "v35", title: "Critical Thinking Skills", description: "Develop better reasoning and analysis.", videoLink: "https://www.youtube.com/watch?v=Cum3k-Wglfw" },
       { id: "v36", title: "Logical Reasoning", description: "Improve your logical thinking abilities.", videoLink: "https://www.youtube.com/watch?v=bCqLnNJws5o" },
