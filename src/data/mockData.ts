@@ -191,6 +191,7 @@ export const skills: Skill[] = [
     description: "Develop effective verbal and written communication.",
     thumbnail: communicationThumb,
     category: "nontech",
+    difficulty: "Beginner",
     videos: [
       { id: "v13", title: "Effective Communication", description: "Master professional communication techniques.", videoLink: "https://www.youtube.com/watch?v=HAnw168huqA" },
       { id: "v14", title: "Business Writing Skills", description: "Write clear, professional emails and documents.", videoLink: "https://www.youtube.com/watch?v=so4IlhMqmS8" },
