@@ -298,6 +298,7 @@ export const skills: Skill[] = [
     description: "Add static typing to JavaScript for safer, more scalable code.",
     thumbnail: typescriptThumb,
     category: "tech",
+    difficulty: "Intermediate",
     videos: [
       { id: "v23", title: "TypeScript for Beginners", description: "Learn TypeScript fundamentals from scratch.", videoLink: "https://www.youtube.com/watch?v=d56mG7DezGs" },
       { id: "v24", title: "TypeScript with React", description: "Build type-safe React applications.", videoLink: "https://www.youtube.com/watch?v=TPACABQTHvM" },
