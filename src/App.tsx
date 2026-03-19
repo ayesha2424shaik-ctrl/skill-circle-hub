@@ -5,6 +5,10 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { AuthProvider, useAuth } from "@/context/AuthContext";
 import { NotificationProvider } from "@/context/NotificationContext";
+import { ThemeProvider } from "@/context/ThemeContext";
+import { BookmarkProvider } from "@/context/BookmarkContext";
+import { GamificationProvider } from "@/context/GamificationContext";
+import { CommentProvider } from "@/context/CommentContext";
 import Welcome from "./pages/Welcome";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -12,6 +16,9 @@ import HomePage from "./pages/HomePage";
 import Dashboard from "./pages/Dashboard";
 import Sources from "./pages/Sources";
 import SkillDetail from "./pages/SkillDetail";
+import Profile from "./pages/Profile";
+import Quiz from "./pages/Quiz";
+import Saved from "./pages/Saved";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -37,8 +44,11 @@ const AppRoutes = () => (
     <Route path="/register" element={<PublicRoute><Register /></PublicRoute>} />
     <Route path="/home" element={<ProtectedRoute><HomePage /></ProtectedRoute>} />
     <Route path="/skill/:skillId" element={<ProtectedRoute><SkillDetail /></ProtectedRoute>} />
+    <Route path="/quiz/:skillId" element={<ProtectedRoute><Quiz /></ProtectedRoute>} />
     <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
     <Route path="/sources" element={<ProtectedRoute><Sources /></ProtectedRoute>} />
+    <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
+    <Route path="/saved" element={<ProtectedRoute><Saved /></ProtectedRoute>} />
     <Route path="*" element={<NotFound />} />
   </Routes>
 );
@@ -48,13 +58,21 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <AuthProvider>
-        <NotificationProvider>
-          <BrowserRouter>
-            <AppRoutes />
-          </BrowserRouter>
-        </NotificationProvider>
-      </AuthProvider>
+      <ThemeProvider>
+        <AuthProvider>
+          <GamificationProvider>
+            <BookmarkProvider>
+              <CommentProvider>
+                <NotificationProvider>
+                  <BrowserRouter>
+                    <AppRoutes />
+                  </BrowserRouter>
+                </NotificationProvider>
+              </CommentProvider>
+            </BookmarkProvider>
+          </GamificationProvider>
+        </AuthProvider>
+      </ThemeProvider>
     </TooltipProvider>
   </QueryClientProvider>
 );
