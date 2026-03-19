@@ -454,6 +454,7 @@ export const skills: Skill[] = [
     description: "Build self-awareness and empathy for better relationships.",
     thumbnail: emotionalIntelligenceThumb,
     category: "nontech",
+    difficulty: "Intermediate",
     videos: [
       { id: "v37", title: "Emotional Intelligence Explained", description: "Understanding and developing EQ.", videoLink: "https://www.youtube.com/watch?v=Y7m9eNoB3NU" },
       { id: "v38", title: "Building Empathy", description: "Develop empathy and emotional awareness.", videoLink: "https://www.youtube.com/watch?v=1Evwgu369Jw" },
