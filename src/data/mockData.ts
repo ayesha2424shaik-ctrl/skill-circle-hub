@@ -415,6 +415,7 @@ export const skills: Skill[] = [
     description: "Develop analytical thinking and creative solutions.",
     thumbnail: problemSolvingThumb,
     category: "nontech",
+    difficulty: "Intermediate",
     videos: [
       { id: "v33", title: "Problem Solving Techniques", description: "Structured approaches to solving problems.", videoLink: "https://www.youtube.com/watch?v=UFdR8w_R1HA" },
       { id: "v34", title: "Creative Problem Solving", description: "Think outside the box for innovative solutions.", videoLink: "https://www.youtube.com/watch?v=9k_jABNk6tc" },
