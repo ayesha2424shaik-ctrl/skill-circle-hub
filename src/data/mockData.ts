@@ -232,6 +232,7 @@ export const skills: Skill[] = [
     description: "Master productivity techniques to maximize every day.",
     thumbnail: timemgmtThumb,
     category: "nontech",
+    difficulty: "Beginner",
     videos: [
       { id: "v17", title: "Time Management Masterclass", description: "Learn proven productivity strategies.", videoLink: "https://www.youtube.com/watch?v=iONDebHX9qk" },
       { id: "v18", title: "The Pomodoro Technique", description: "Use time-boxing to boost focus and output.", videoLink: "https://www.youtube.com/watch?v=mNBmG24djoY" },
