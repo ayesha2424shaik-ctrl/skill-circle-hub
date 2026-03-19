@@ -212,6 +212,7 @@ export const skills: Skill[] = [
     description: "Overcome stage fright and deliver compelling presentations.",
     thumbnail: speakingThumb,
     category: "nontech",
+    difficulty: "Intermediate",
     videos: [
       { id: "v15", title: "TED's Secret to Great Speaking", description: "Learn what makes TED talks so compelling.", videoLink: "https://www.youtube.com/watch?v=-FOCpMAww28" },
       { id: "v16", title: "Public Speaking Tips", description: "Practical tips to improve your presentations.", videoLink: "https://www.youtube.com/watch?v=tShavGuo0_E" },
