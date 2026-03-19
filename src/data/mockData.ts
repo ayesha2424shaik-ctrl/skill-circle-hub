@@ -346,6 +346,7 @@ export const skills: Skill[] = [
     description: "Learn to containerize applications for consistent deployment.",
     thumbnail: dockerThumb,
     category: "tech",
+    difficulty: "Advanced",
     videos: [
       { id: "v27", title: "Docker Tutorial for Beginners", description: "Complete Docker crash course.", videoLink: "https://www.youtube.com/watch?v=3c-iBn73dDE" },
       { id: "v28", title: "Docker Compose", description: "Manage multi-container applications.", videoLink: "https://www.youtube.com/watch?v=SXwC9fSwct8" },
