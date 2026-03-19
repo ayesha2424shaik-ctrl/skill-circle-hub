@@ -52,6 +52,7 @@ export interface Skill {
   description: string;
   thumbnail: string;
   category: "tech" | "nontech";
+  difficulty: "Beginner" | "Intermediate" | "Advanced";
   videos: Video[];
   resources: Resource[];
   platforms: CodingPlatform[];
