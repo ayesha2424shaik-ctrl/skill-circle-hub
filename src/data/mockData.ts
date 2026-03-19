@@ -370,6 +370,7 @@ export const skills: Skill[] = [
     description: "Master fundamental CS concepts for coding interviews.",
     thumbnail: dsaThumb,
     category: "tech",
+    difficulty: "Advanced",
     videos: [
       { id: "v29", title: "Data Structures Full Course", description: "Complete guide to data structures.", videoLink: "https://www.youtube.com/watch?v=RBSGKlAvoiM" },
       { id: "v30", title: "Algorithm Techniques", description: "Common algorithm patterns and approaches.", videoLink: "https://www.youtube.com/watch?v=8hly31xKli0" },
