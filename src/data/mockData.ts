@@ -395,6 +395,7 @@ export const skills: Skill[] = [
     description: "Learn to work effectively in teams and collaborate.",
     thumbnail: teamworkThumb,
     category: "nontech",
+    difficulty: "Beginner",
     videos: [
       { id: "v31", title: "Teamwork Skills", description: "Essential skills for effective collaboration.", videoLink: "https://www.youtube.com/watch?v=yyw0xeOwVd0" },
       { id: "v32", title: "Remote Team Collaboration", description: "Collaborate effectively in remote settings.", videoLink: "https://www.youtube.com/watch?v=a9TRj8RFy3I" },
