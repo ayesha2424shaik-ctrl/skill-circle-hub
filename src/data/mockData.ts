@@ -167,6 +167,7 @@ export const skills: Skill[] = [
     description: "Learn Git workflows, branching, and collaboration techniques.",
     thumbnail: gitThumb,
     category: "tech",
+    difficulty: "Beginner",
     videos: [
       { id: "v11", title: "Git & GitHub Crash Course", description: "Learn Git fundamentals and GitHub workflows.", videoLink: "https://www.youtube.com/watch?v=RGOj5yH7evk" },
       { id: "v12", title: "Advanced Git Techniques", description: "Rebasing, cherry-pick, and advanced merging.", videoLink: "https://www.youtube.com/watch?v=qsTthZi23VE" },
