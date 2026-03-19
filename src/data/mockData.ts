@@ -252,6 +252,7 @@ export const skills: Skill[] = [
     description: "Build leadership skills that inspire teams and drive results.",
     thumbnail: leadershipThumb,
     category: "nontech",
+    difficulty: "Advanced",
     videos: [
       { id: "v19", title: "Leadership Skills", description: "Essential leadership qualities for any role.", videoLink: "https://www.youtube.com/watch?v=pYKH2uSax8U" },
       { id: "v20", title: "How Great Leaders Inspire", description: "Simon Sinek's golden circle of leadership.", videoLink: "https://www.youtube.com/watch?v=qp0HIF3SfI4" },
