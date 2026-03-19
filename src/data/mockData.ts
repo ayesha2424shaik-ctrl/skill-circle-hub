@@ -142,6 +142,7 @@ export const skills: Skill[] = [
     description: "Start your programming journey with Python's clean syntax.",
     thumbnail: pythonThumb,
     category: "tech",
+    difficulty: "Beginner",
     videos: [
       { id: "v9", title: "Python for Beginners", description: "Learn Python basics from scratch.", videoLink: "https://www.youtube.com/watch?v=kqtD5dpn9C8" },
       { id: "v10", title: "Python Projects for Beginners", description: "Build real projects with Python.", videoLink: "https://www.youtube.com/watch?v=8ext9G7xspg" },
