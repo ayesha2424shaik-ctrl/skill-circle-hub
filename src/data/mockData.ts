@@ -322,6 +322,7 @@ export const skills: Skill[] = [
     description: "Learn to work with relational databases and query data.",
     thumbnail: sqlThumb,
     category: "tech",
+    difficulty: "Intermediate",
     videos: [
       { id: "v25", title: "SQL Full Course", description: "Complete SQL tutorial for beginners.", videoLink: "https://www.youtube.com/watch?v=HXV3zeQKqGY" },
       { id: "v26", title: "Database Design", description: "Learn to design efficient database schemas.", videoLink: "https://www.youtube.com/watch?v=ztHopE5Wnpc" },
