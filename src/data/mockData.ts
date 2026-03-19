@@ -118,6 +118,7 @@ export const skills: Skill[] = [
     description: "Build server-side applications with JavaScript runtime.",
     thumbnail: nodejsThumb,
     category: "tech",
+    difficulty: "Intermediate",
     videos: [
       { id: "v7", title: "Node.js Crash Course", description: "Build server-side apps and understand the event loop.", videoLink: "https://www.youtube.com/watch?v=fBNz5xF-Kx4" },
       { id: "v8", title: "REST API with Node.js", description: "Create RESTful APIs using Express.js.", videoLink: "https://www.youtube.com/watch?v=pKd0Rpw7O48" },
