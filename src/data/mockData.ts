@@ -92,6 +92,7 @@ export const skills: Skill[] = [
     description: "Master the language of the web with modern ES6+ features.",
     thumbnail: jsThumb,
     category: "tech",
+    difficulty: "Beginner",
     videos: [
       { id: "v4", title: "JavaScript ES6+ Features", description: "Arrow functions, destructuring, async/await and more.", videoLink: "https://www.youtube.com/watch?v=NCwa_xi0Uuc" },
       { id: "v5", title: "JavaScript DOM Manipulation", description: "Learn to interact with the browser DOM.", videoLink: "https://www.youtube.com/watch?v=5fb2aPlgoys" },
