@@ -66,6 +66,7 @@ export const skills: Skill[] = [
     description: "Build modern user interfaces with React's component-based architecture.",
     thumbnail: reactThumb,
     category: "tech",
+    difficulty: "Intermediate",
     videos: [
       { id: "v1", title: "React Fundamentals", description: "Learn components, props, and state management.", videoLink: "https://www.youtube.com/watch?v=Ke90Tje7VS0" },
       { id: "v2", title: "React Hooks Deep Dive", description: "Master useState, useEffect, and custom hooks.", videoLink: "https://www.youtube.com/watch?v=TNhaISOUy6Q" },
